@@ -1,0 +1,13 @@
+apply plugin: 'groovy'
+apply plugin: 'idea'
+
+defaultTasks 'idea', 'build'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile 'org.codehaus.groovy:groovy-all:2.3.9'
+}
+
