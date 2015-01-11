@@ -1,9 +1,9 @@
 package io.igorpopov.irc
 
-class MessageListener implements Runnable {
+class MessageReader implements Runnable {
     private Socket socket
 
-    MessageListener(Socket socket) {
+    MessageReader(Socket socket) {
         this.socket = socket
     }
 
