@@ -14,7 +14,15 @@ class MessageWriter implements Runnable {
     @Override
     void run() {
         setIdentity()
+        joinChannelsAfterSeconds(5)
         readMessagesFromKeyboardAndSendThemToTheServer()
+    }
+
+    def joinChannelsAfterSeconds(int seconds) {
+        println("DEBUG - Will join channels in " + seconds + " seconds...")
+        Thread.sleep(seconds * 1000)
+        println("DEBUG - Joining...")
+        stream.println("JOIN #torrents.ro")
     }
 
     def readMessagesFromKeyboardAndSendThemToTheServer() {
