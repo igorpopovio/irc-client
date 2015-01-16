@@ -22,7 +22,7 @@ class MessageWriter implements Runnable {
         println("DEBUG - Will join channels in " + seconds + " seconds...")
         Thread.sleep(seconds * 1000)
         println("DEBUG - Joining...")
-        stream.println("JOIN #torrents.ro")
+        stream.println("JOIN #my-channel")
     }
 
     def readMessagesFromKeyboardAndSendThemToTheServer() {
